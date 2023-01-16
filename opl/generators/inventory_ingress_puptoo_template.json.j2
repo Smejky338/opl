@@ -9,7 +9,7 @@
       "bios_uuid": "{{ bios_uuid }}",
       "machine_id": "1bbed92a-febe-419b-91b6-3a9f3205876d",
       "ip_addresses": [{% for addr in ipv4_addr + ipv6_addr %}"{{ addr }}"{% if not loop.last %},{% endif %}{% endfor %}],
-      "mac_addresses": [{% for addr in mac_addr %}"{{ addr }}"{% if not loop.last %},{% endif %}{% endfor %}],
+      "mac_addresses": [{% for addr in mac_addr %}{{ addr }}{% if not loop.last %},{% endif %}{% endfor %}],
       "stale_timestamp": "{{ tommorowz }}",
       "reporter": "puptoo",
       "system_profile": {
